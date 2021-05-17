@@ -7,11 +7,11 @@ import com.gfwesllei.abstractfactory.response.PaymentRespose;
 
 public class MercadoPagoAdapter extends PayPalPayment {
 
-    void doPayment(String token,double value){
-        super.doPayment(token,new PaymentRequest(value,token));
+       void receivePayment(String token,double value){
+        super.receivePayment(token,new PaymentRespose("wenaiisdjjiijs"));
     }
 
-    void receivePayment(String token,double value){
-        super.receivePayment(token,new PaymentRespose("wenaiisdjjiijs"));
+    public void doPaymentPaypal(String token, double value) {
+        super.doPayment(token,new PaymentRequest(value,token));
     }
 }

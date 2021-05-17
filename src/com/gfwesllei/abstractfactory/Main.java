@@ -12,8 +12,10 @@ public class Main {
         String token="jsijsijijijs";
         double value = 10.0;
         //Payment payment = new PayPalPayment();
-        Payment payment = new MercadoPagoAdapter();
-        payment.doPayment(token, new PaymentRequest(value,token));
+        //payment.doPayment(token, new PaymentRequest(value,token));
+
+        MercadoPagoAdapter payment = new MercadoPagoAdapter();
+        payment.doPaymentPaypal(token, value);
 
     }
 }
